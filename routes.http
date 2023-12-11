@@ -1,0 +1,23 @@
+POST http://localhost:3333/bolos
+Content-Type: application/json
+
+{
+    "tamanho": "Tamanho 01",
+    "adicionais": "Adicionais 02",
+    "sabor": "Sabor 03"
+}
+
+###
+
+GET http://localhost:3333/bolos
+
+###
+
+PUT http://localhost:3333/bolos/
+Content-Type: application/json
+
+{
+    "tamanho": "Tamanho 01",
+    "Adicionais": "Adicionais 02",
+    "sabor": "Sabor 03"
+}
