@@ -2,17 +2,23 @@ import {randomUUID} from "node:crypto"
 export class DatabaseMemory {
 #bolos = new Map()
 
-list(){
-    return Array.from(this.#bolos.entries()).map((livroArray) => {
+list(search){
+    return Array.from(this.#bolos.entries()).map((boloArray) => {
     //primeira posicao
-        const id = livroArray[0]
+        const id = boloArray[0]
     //segunda posicao
-        const data = livroArray[1]
+        const data = boloArray[1]
 
         return{
             id,
             ...data,
         }
+    })
+    .filter(bolos => {
+        if(search) {
+            return bolos.tamanho.includes(search)
+        }
+        return true
     })
 }
 

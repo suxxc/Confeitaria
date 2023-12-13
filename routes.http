@@ -9,11 +9,15 @@ Content-Type: application/json
 
 ###
 
+GET http://localhost:3333/bolos?search=Tamanho01
+
+###
+
 GET http://localhost:3333/bolos
 
 ###
 
-PUT http://localhost:3333/bolos/
+PUT http://localhost:3333/bolos/da722b48-9f0d-4f57-a5c6-449ff373972f
 Content-Type: application/json
 
 {
@@ -21,3 +25,7 @@ Content-Type: application/json
     "Adicionais": "Adicionais 02",
     "sabor": "Sabor 03"
 }
+
+###
+
+DELETE http://localhost:3333/bolos/da722b48-9f0d-4f57-a5c6-449ff373972f
